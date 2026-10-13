@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>indri efef</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght@400;600;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="boot-screen">
+        <div class="nintendo-logo">Congratulation</div>
+    </div>
+
+    <div class="console-container">
+        <div class="screen-frame">
+            <div class="screen" id="screen">
+                
+                <!-- Screen 1: BMO Face (Layar Utama Penuh) -->
+                <div id="bmo-screen" class="bmo-container">
+                    <div class="bmo-screen-display" id="console-screen" onclick="handleFaceClick()">
+                        <div class="face-wrapper">
+                            <div class="eyes-row">
+                                <div class="bmo-eye" id="eye-left"></div>
+                                <div class="bmo-eye" id="eye-right"></div>
+                            </div>
+                            <div class="bmo-mouth" id="bmo-mouth"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 2: Menu Utama -->
+                <div id="menu-screen" class="hidden"> 
+                    <h2 class="title" style="color: #0984e3;">Congratulation</h2>
+                    <p class="subtitle">Indri Febriani, S.E</p>
+                    <div class="menu-items">
+                        <div class="menu-item selected" data-index="0"><i class="fas fa-envelope-open-text"></i> Pesan </div>
+                        <div class="menu-item" data-index="1"><i class="fas fa-camera-retro"></i> Momen </div>
+                        <div class="menu-item" data-index="2"><i class="fas fa-music"></i> Playlist </div>
+                        <div class="menu-item" data-index="3"><i class="fas fa-gamepad"></i> Game</div>
+                    </div>
+                </div>
+
+                <!-- Screen 3: Aplikasi Konten -->
+                <div id="app-screen" class="hidden"></div>
+            </div>
+        </div>
+
+        <div class="controls-area">
+            <div class="d-pad">
+                <button class="d-btn up" onclick="input('UP')"><i class="fas fa-caret-up"></i></button>
+                <button class="d-btn left" onclick="input('LEFT')"><i class="fas fa-caret-left"></i></button>
+                <div class="d-btn center"></div>
+                <button class="d-btn right" onclick="input('RIGHT')"><i class="fas fa-caret-right"></i></button>
+                <button class="d-btn down" onclick="input('DOWN')"><i class="fas fa-caret-down"></i></button>
+            </div>
+
+            <div class="action-buttons">
+                <div class="btn-group">
+                    <button class="btn-action b" onclick="input('B')">B</button>
+                    <span>Back</span>
+                </div>
+                <div class="btn-group">
+                    <button class="btn-action a" onclick="input('A')">A</button>
+                    <span>Select</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bgm" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
